@@ -8,10 +8,10 @@ async function pesquisarCep(cep){
 }
 async function preecherCampos ({target}){
   const infoCep = await pesquisarCep(target.value)
-  console.log(infoCep)
+ /*  console.log(infoCep) */
   document.getElementById('endereco').value = infoCep.logradouro
   document.getElementById('bairro').value = infoCep.bairro
-  document.getElementById('cidade').value = infoCep.cidade
+  document.getElementById('cidade').value = infoCep.localidade
   document.getElementById('estado').value = infoCep.estado
 }
 document.getElementById('cep')
